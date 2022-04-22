@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>What CC Map Is It?</title>
+    <!-- I just stole most of this from http://isitonsalday.com/ -->
+    <meta property="og:title" content="What CC Map Is It?" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="http://kyoukaya.github.com/what-cc-map-is-it"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <style>
+      html,
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: white;
+        color: black;
+        font-family: "Open Sans", Arial, sans-serif;
+        overflow: hidden;
+      }
+      #answer {
+        line-height: 100vh;
+        text-align: center;
+        font-weight: 800;
+        font-size: 20vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="answer"></div>
+    <script>
+      const maps = ["The Palaistra", "The Volcanic Heart", "Cloud 9"];
+      const curmap = maps[Math.floor((Date.now() + 32400000) / 5400000) % 3];
+      document.getElementById("answer").innerHTML = curmap;
+    </script>
+  </body>
+</html>
