@@ -30,14 +30,14 @@
         line-height: 100vh;
         text-align: center;
         font-weight: 800;
-        font-size: 20vw;
+        font-size: 10vw;
       }
     </style>
   </head>
   <body>
     <div id="answer"></div>
     <script>
-      const maps = ["The Palaistra", "The Volcanic Heart", "Cloud 9"];
+      const maps = ["Palaistra", "Volcanic Heart", "Cloud 9"];
       const curmap = maps[Math.floor((Date.now() + 32400000) / 5400000) % 3];
       document.getElementById("answer").innerHTML = curmap;
     </script>
